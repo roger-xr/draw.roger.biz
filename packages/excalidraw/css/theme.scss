@@ -53,7 +53,7 @@
   --scrollbar-thumb: var(--button-gray-2);
   --scrollbar-thumb-hover: var(--button-gray-3);
 
-  --color-slider-track: hsl(240, 100%, 90%);
+  --color-slider-track: #d6d6d6;
   --color-slider-thumb: var(--color-gray-80);
 
   --modal-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
@@ -79,16 +79,16 @@
   --space-factor: 0.25rem;
   --text-primary-color: var(--color-on-surface);
 
-  --color-selection: #6965db;
+  --color-selection: #1e1e1e;
 
   --color-icon-white: #fff;
 
-  --color-primary: #6965db;
-  --color-primary-darker: #5b57d1;
-  --color-primary-darkest: #4a47b1;
-  --color-primary-light: #e3e2fe;
-  --color-primary-light-darker: #d7d5ff;
-  --color-primary-hover: #5753d0;
+  --color-primary: #1e1e1e;
+  --color-primary-darker: #121212;
+  --color-primary-darkest: #000000;
+  --color-primary-light: #ececec;
+  --color-primary-light-darker: #d6d6d6;
+  --color-primary-hover: #3d3d3d;
 
   --color-gray-10: #f5f5f5;
   --color-gray-20: #ebebeb;
@@ -143,23 +143,23 @@
   --color-success-contrast-active: #6edf74;
 
   --color-logo-icon: var(--color-primary);
-  --color-logo-text: #190064;
+  --color-logo-text: #1e1e1e;
 
   --border-radius-md: 0.375rem;
   --border-radius-lg: 0.5rem;
 
-  --color-surface-high: #f1f0ff;
-  --color-surface-mid: #f6f6f9;
-  --color-surface-low: #ececf4;
+  --color-surface-high: #f3f3f3;
+  --color-surface-mid: #f6f6f6;
+  --color-surface-low: #eeeeee;
   --color-surface-lowest: #ffffff;
   --color-on-surface: #1b1b1f;
-  --color-brand-hover: #5753d0;
-  --color-on-primary-container: #030064;
-  --color-surface-primary-container: #e0dfff;
-  --color-brand-active: #4440bf;
-  --color-border-outline: #767680;
-  --color-border-outline-variant: #c5c5d0;
-  --color-surface-primary-container: #e0dfff;
+  --color-brand-hover: #3d3d3d;
+  --color-on-primary-container: #1e1e1e;
+  --color-surface-primary-container: #f0f0f0;
+  --color-brand-active: #000000;
+  --color-border-outline: #767676;
+  --color-border-outline-variant: #c5c5c5;
+  --color-surface-primary-container: #f0f0f0;
 
   --color-badge: #0b6513;
   --background-color-badge: #d3ffd2;
@@ -200,8 +200,8 @@
     --input-border-color: #2e2e2e;
     --input-hover-bg-color: #181818;
     --input-label-color: #{$color-gray-2};
-    --island-bg-color: #232329;
-    --island-bg-color-alt: hsl(240, 12%, 12%);
+    --island-bg-color: #242424;
+    --island-bg-color-alt: #1f1f1f;
     --keybinding-color: var(--color-gray-60);
     --link-color: #{$color-blue-4};
     --overlay-bg-color: rgba(12, 12, 14, 0.65);
@@ -221,19 +221,18 @@
     --scrollbar-thumb: #{$color-gray-8};
     --scrollbar-thumb-hover: #{$color-gray-7};
 
-    --color-slider-track: hsl(244, 23%, 39%);
+    --color-slider-track: #3a3a3a;
 
-    // will be inverted to a lighter color.
-    --color-selection: #b4b0ff;
+    --color-selection: #ffffff;
 
     --color-icon-white: var(--color-gray-90);
 
-    --color-primary: #a8a5ff;
-    --color-primary-darker: #b2aeff;
-    --color-primary-darkest: #beb9ff;
-    --color-primary-light: #4f4d6f;
-    --color-primary-light-darker: #43415e;
-    --color-primary-hover: #bbb8ff;
+    --color-primary: #ffffff;
+    --color-primary-darker: #ffffff;
+    --color-primary-darkest: #ffffff;
+    --color-primary-light: #2a2a2a;
+    --color-primary-light-darker: #333333;
+    --color-primary-hover: #ffffff;
 
     --color-disabled: var(--color-gray-70);
 
@@ -261,19 +260,19 @@
     --color-muted-background: var(--color-gray-40);
     --color-muted-background-darker: var(--color-gray-20);
 
-    --color-logo-text: #e2dfff;
+    --color-logo-text: #ffffff;
 
-    --color-surface-high: #2e2d39;
-    --color-surface-low: hsl(240, 8%, 15%);
-    --color-surface-mid: hsl(240 6% 10%);
+    --color-surface-high: #2e2e2e;
+    --color-surface-low: #262626;
+    --color-surface-mid: #1a1a1a;
     --color-surface-lowest: hsl(0, 0%, 7%);
-    --color-on-surface: #e3e3e8;
-    --color-brand-hover: #bbb8ff;
-    --color-on-primary-container: #e0dfff;
-    --color-surface-primary-container: #403e6a;
-    --color-brand-active: #d0ccff;
-    --color-border-outline: #8e8d9c;
-    --color-border-outline-variant: #46464f;
-    --color-surface-primary-container: #403e6a;
+    --color-on-surface: #e8e8e8;
+    --color-brand-hover: #ffffff;
+    --color-on-primary-container: #ffffff;
+    --color-surface-primary-container: #2a2a2a;
+    --color-brand-active: #ffffff;
+    --color-border-outline: #8e8e8e;
+    --color-border-outline-variant: #464646;
+    --color-surface-primary-container: #2a2a2a;
   }
 }

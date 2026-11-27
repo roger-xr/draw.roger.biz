@@ -283,7 +283,7 @@ export class MinimapController {
 
     const colors: MinimapColors = {
       element: getColor("--minimap-element-color", "#999"),
-      viewport: getColor("--minimap-viewport-color", "#6965db"),
+      viewport: getColor("--minimap-viewport-color", "#1e1e1e"),
     };
 
     return {

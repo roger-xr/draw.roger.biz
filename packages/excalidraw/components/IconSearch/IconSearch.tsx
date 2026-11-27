@@ -1,11 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import {
-  EVENT,
-  KEYS,
-  THEME,
-  viewportCoordsToSceneCoords,
-} from "@excalidraw/common";
+import { EVENT, KEYS, viewportCoordsToSceneCoords } from "@excalidraw/common";
 
 import { SVGStringToFile } from "../../data/blob";
 import { useUIAppState } from "../../context/ui-appState";
@@ -25,8 +20,9 @@ import "./IconSearch.scss";
 
 import type { ReactNode } from "react";
 
-const LIGHT_ICON_FILL = "#1e1e1e";
-const DARK_ICON_FILL = "#f5f5f5";
+// The canvas inverts SVG images while the theme is dark, so the stored
+// icon stays dark and both theme switches recolor it.
+const ICON_FILL = "#1e1e1e";
 
 const isIconSearchShortcut = (event: KeyboardEvent) => {
   return (
@@ -141,11 +137,9 @@ const IconSearchDialog = () => {
     setStatus(t("iconSearch.adding"));
 
     try {
-      const fill =
-        app.state.theme === THEME.DARK ? DARK_ICON_FILL : LIGHT_ICON_FILL;
       const svg = await fetchMaterialIconSvg(
         name,
-        fill,
+        ICON_FILL,
         app.ownerDocument,
         controller.signal,
       );

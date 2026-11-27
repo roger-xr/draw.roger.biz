@@ -56,6 +56,7 @@ import { ErrorDialog } from "./ErrorDialog";
 import { EyeDropper, activeEyeDropperAtom } from "./EyeDropper";
 import { FixedSideContainer } from "./FixedSideContainer";
 import { HelpDialog } from "./HelpDialog";
+import { IconSearch } from "./IconSearch/IconSearch";
 import { ImageExportDialog } from "./ImageExportDialog";
 import { Island } from "./Island";
 import { JSONExportDialog } from "./JSONExportDialog";
@@ -128,6 +129,7 @@ const DefaultMainMenu: React.FC<{
       {UIOptions.canvasActions.saveAsImage && (
         <MainMenu.DefaultItems.SaveAsImage />
       )}
+      <MainMenu.DefaultItems.IconSearch />
       <MainMenu.DefaultItems.SearchMenu />
       <MainMenu.DefaultItems.Help />
       <MainMenu.DefaultItems.ClearCanvas />
@@ -595,6 +597,7 @@ const LayerUI = ({
             }}
           />
         )}
+      <IconSearch />
       {appState.openDialog?.name === "help" && (
         <HelpDialog
           onClose={() => {

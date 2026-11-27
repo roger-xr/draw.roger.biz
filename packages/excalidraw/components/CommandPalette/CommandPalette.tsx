@@ -45,6 +45,7 @@ import {
   LockedIcon,
   UnlockedIcon,
   searchIcon,
+  ImageIcon,
   boltIcon,
   bucketFillIcon,
   ExportImageIcon,
@@ -442,6 +443,24 @@ function CommandPaletteInner({
                 },
               });
             }
+          },
+        },
+        {
+          label: t("iconSearch.title"),
+          category: DEFAULT_CATEGORIES.app,
+          icon: ImageIcon,
+          shortcut: getShortcutFromShortcutName("iconSearch"),
+          keywords: [
+            "google",
+            "material",
+            "symbols",
+            "icon",
+            "icons",
+            "insert",
+          ],
+          viewMode: false,
+          perform: () => {
+            setAppState({ openDialog: { name: "iconSearch" } });
           },
         },
         {

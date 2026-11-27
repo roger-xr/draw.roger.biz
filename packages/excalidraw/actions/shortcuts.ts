@@ -55,6 +55,7 @@ export type ShortcutName =
   | "imageExport"
   | "commandPalette"
   | "searchMenu"
+  | "iconSearch"
   | "toolLock";
 
 const shortcutMap: Record<ShortcutName, string[]> = {
@@ -67,6 +68,7 @@ const shortcutMap: Record<ShortcutName, string[]> = {
     getShortcutKey("CtrlOrCmd+/"),
     getShortcutKey("CtrlOrCmd+Shift+P"),
   ],
+  iconSearch: [getShortcutKey("CtrlOrCmd+I")],
   cut: [getShortcutKey("CtrlOrCmd+X")],
   copy: [getShortcutKey("CtrlOrCmd+C")],
   paste: [getShortcutKey("CtrlOrCmd+V")],

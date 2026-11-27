@@ -1,0 +1,117 @@
+@use "../../css/variables.module" as *;
+
+.excalidraw {
+  .icon-search-dialog {
+    user-select: none;
+
+    .Modal__content {
+      height: auto;
+      max-height: min(640px, 100%);
+
+      .Island {
+        height: 100%;
+        padding: 1.5rem;
+      }
+
+      .Dialog__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .icon-search-status {
+      min-height: 1.25rem;
+      margin-top: 0.5rem;
+      color: var(--color-gray-50);
+      font-size: 0.8125rem;
+    }
+
+    .shortcuts-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+      gap: 1.5rem;
+    }
+
+    .shortcut {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 16px;
+      font-size: 10px;
+      gap: 0.25rem;
+
+      .shortcut-wrapper {
+        display: flex;
+      }
+
+      .shortcut-key {
+        padding: 0px 4px;
+        height: 16px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-primary-light);
+      }
+
+      .shortcut-desc {
+        margin-left: 4px;
+        color: var(--color-gray-50);
+      }
+    }
+
+    .commands {
+      overflow-y: auto;
+      box-sizing: border-box;
+      margin-top: 12px;
+      color: var(--popup-text-color);
+    }
+
+    .command-item {
+      color: var(--popup-text-color);
+      height: 2.75rem;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 0.5rem;
+      border-radius: var(--border-radius-lg);
+      cursor: pointer;
+      gap: 0.75rem;
+
+      &:active {
+        background-color: var(--color-surface-low);
+      }
+    }
+
+    .item-selected {
+      background-color: var(--color-surface-mid);
+    }
+
+    .icon-search-preview {
+      width: 1.5rem;
+      height: 1.5rem;
+      flex: none;
+      object-fit: contain;
+    }
+
+    .icon-search-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .no-match {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 36px;
+    }
+  }
+
+  &.theme--dark .icon-search-dialog .icon-search-preview {
+    filter: invert(1);
+  }
+}

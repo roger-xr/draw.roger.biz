@@ -498,6 +498,7 @@ export interface AppState {
     | { name: "imageExport" | "help" | "jsonExport" }
     | { name: "ttd"; tab: "text-to-diagram" | "mermaid" }
     | { name: "commandPalette" }
+    | { name: "iconSearch" }
     | { name: "settings" }
     | { name: "elementLinkSelector"; sourceElementId: ExcalidrawElement["id"] }
     | { name: "charts"; data: Spreadsheet; rawText: string };
@@ -1270,6 +1271,7 @@ export type AppClassProperties = {
   viewport: App["viewport"];
   wheel: App["wheel"];
   addFiles: App["addFiles"];
+  insertImages: App["insertImages"];
   addElementsFromPasteOrLibrary: App["addElementsFromPasteOrLibrary"];
   togglePenMode: App["togglePenMode"];
   toggleLock: App["toggleLock"];

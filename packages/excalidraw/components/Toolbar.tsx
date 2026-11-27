@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import { KEYS } from "@excalidraw/common";
 
+import { getShortcutFromShortcutName } from "../actions/shortcuts";
 import { useTunnels } from "../context/tunnels";
 import { t } from "../i18n";
 
@@ -18,6 +19,7 @@ import {
   EmbedIcon,
   frameToolIcon,
   ImageIcon,
+  gridIcon,
   LassoIcon,
   laserPointerToolIcon,
   bucketFillIcon,
@@ -132,6 +134,15 @@ const ExtraToolsDropdown = ({
             {t("toolBar.image")}
           </DropdownMenu.Item>
         )}
+        <DropdownMenu.Item
+          onSelect={() => setAppState({ openDialog: { name: "iconSearch" } })}
+          icon={gridIcon}
+          shortcut={getShortcutFromShortcutName("iconSearch")}
+          data-testid="toolbar-icon-search"
+          disabled={app.state.viewModeEnabled}
+        >
+          {t("iconSearch.title")}
+        </DropdownMenu.Item>
         <DropdownMenu.Item
           onSelect={() => app.setActiveTool({ type: "frame" })}
           icon={frameToolIcon}

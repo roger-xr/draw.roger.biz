@@ -31,4 +31,25 @@ describe("shortcuts", () => {
       expect(window.h.elements[0].isDeleted).toBe(true);
     });
   });
+
+  it("opens Google icon search with Ctrl/Cmd+I", async () => {
+    await render(<Excalidraw />);
+
+    fireEvent.keyDown(window, {
+      key: KEYS.I,
+      ctrlKey: true,
+      metaKey: true,
+    });
+
+    const dialog = document.querySelector(".icon-search-dialog");
+    expect(dialog).not.toBeNull();
+
+    const input = dialog?.querySelector("input");
+    expect(input).not.toBeNull();
+    fireEvent.change(input!, { target: { value: "home" } });
+
+    await waitFor(() => {
+      expect(dialog?.textContent).toContain("home");
+    });
+  });
 });

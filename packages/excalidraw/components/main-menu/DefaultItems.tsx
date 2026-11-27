@@ -60,6 +60,7 @@ import {
   MoonIcon,
   save,
   searchIcon,
+  ImageIcon,
   SunIcon,
   TrashIcon,
   usersIcon,
@@ -170,6 +171,27 @@ export const CommandPalette = (opts?: { className?: string }) => {
   );
 };
 CommandPalette.displayName = "CommandPalette";
+
+export const IconSearch = (opts?: { className?: string }) => {
+  const setAppState = useExcalidrawSetAppState();
+  const { t } = useI18n();
+
+  return (
+    <DropdownMenuItem
+      icon={ImageIcon}
+      data-testid="icon-search-button"
+      onSelect={() => {
+        setAppState({ openDialog: { name: "iconSearch" } });
+      }}
+      shortcut={getShortcutFromShortcutName("iconSearch")}
+      aria-label={t("iconSearch.title")}
+      className={opts?.className}
+    >
+      {t("iconSearch.title")}
+    </DropdownMenuItem>
+  );
+};
+IconSearch.displayName = "IconSearch";
 
 export const SearchMenu = (opts?: { className?: string }) => {
   const { t } = useI18n();

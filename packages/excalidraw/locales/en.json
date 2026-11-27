@@ -779,6 +779,14 @@
     "itemNotAvailable": "Command is not available...",
     "shortcutHint": "For Command palette, use {{shortcut}}"
   },
+  "iconSearch": {
+    "title": "Google icons",
+    "placeholder": "Search Google icons",
+    "noMatch": "No matching icons",
+    "adding": "Adding icon…",
+    "insertError": "Could not add that icon. Try another one.",
+    "attribution": "Material Symbols"
+  },
   "keys": {
     "ctrl": "Ctrl",
     "option": "Option",

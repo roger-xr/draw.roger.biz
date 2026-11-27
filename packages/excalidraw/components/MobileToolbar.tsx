@@ -3,6 +3,7 @@ import clsx from "clsx";
 
 import { KEYS, capitalizeString } from "@excalidraw/common";
 
+import { getShortcutFromShortcutName } from "../actions/shortcuts";
 import { t } from "../i18n";
 
 import { useTunnels } from "../context/tunnels";
@@ -25,6 +26,7 @@ import {
 import {
   TextIcon,
   ImageIcon,
+  gridIcon,
   DotsIcon,
   frameToolIcon,
   EmbedIcon,
@@ -283,6 +285,15 @@ export const MobileToolbar = ({ app, setAppState }: MobileToolbarProps) => {
               {t("toolBar.image")}
             </DropdownMenu.Item>
           )}
+          <DropdownMenu.Item
+            onSelect={() => setAppState({ openDialog: { name: "iconSearch" } })}
+            icon={gridIcon}
+            shortcut={getShortcutFromShortcutName("iconSearch")}
+            data-testid="toolbar-icon-search"
+            disabled={app.state.viewModeEnabled}
+          >
+            {t("iconSearch.title")}
+          </DropdownMenu.Item>
           <DropdownMenu.Item
             onSelect={() => app.setActiveTool({ type: "stickynote" })}
             icon={stickyNoteToolIcon}

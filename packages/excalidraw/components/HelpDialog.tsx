@@ -322,6 +322,10 @@ export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
               shortcuts={[getShortcutFromShortcutName("searchMenu")]}
             />
             <Shortcut
+              label={t("iconSearch.title")}
+              shortcuts={[getShortcutFromShortcutName("iconSearch")]}
+            />
+            <Shortcut
               label={t("commandPalette.title")}
               shortcuts={
                 isFirefox
